@@ -52,3 +52,23 @@ Trên VAL, 875/1.057 câu `after` mang nhãn `TN`, còn nhóm `before` có 0/87 
 | `4094488636_4` | Chó nâu làm gì sau khi bước qua dây đỏ? | look around → mount the black dog | [7,1–15,1] | [8,2–13,2] | 1,000 |
 
 **Nhận xét.** Hai ca đầu minh họa đúng đáp án nhưng chọn đoạn hoàn toàn rời GT. Hai ca sau minh họa chọn đoạn đạt nhưng nhận sai hành động. Để quy một ca cho lỗi đảo thứ tự, cần xem video và định danh cả sự kiện làm mốc lẫn sự kiện đích.
+
+## 6. Chín ca xem video ngày 14/11
+
+Các nhận xét dưới đây ghi từ lượt xem video của nhóm và đối chiếu với khung hình đại diện, CSV và đỉnh đường cong đã lưu của Original epoch 12. GT là đoạn bằng chứng được chú giải, còn “đỉnh” là thời điểm có điểm cao nhất trên đường cong đã lưu. Các ca do nhóm chọn để xem lỗi. Những giải thích về nguyên nhân trong bảng là giả thuyết theo từng ca.
+
+| ID | Kết quả so với nhãn VAL | Đoạn GT → đoạn chọn (giây), đỉnh | Nhận xét từ video |
+|---|---|---|---|
+| `6277800530_3` | Sai QA và đoạn. *Tăng tốc* → *dừng lại*. | 20,9–26,9 → 9,7–15,2. Đỉnh 13,2. | Nước đục và đất ướt có màu gần nhau, cỡ xe trong khung hình cũng thay đổi. Mô hình chọn đoạn sớm hơn cảnh xe ra khỏi nước. Cần tách khả năng nhầm ranh giới đất–nước khỏi ảnh hưởng của góc quay hoặc kích thước vật trong khung. |
+| `4075791856_3` | Sai QA và đoạn. *Di chuyển giấy* → *nhìn sang người đàn ông*. | 11,2–14,5 → 19,2–30,2. Đỉnh 24,7. | Cảnh quay xa có nhiều người. Câu hỏi yêu cầu theo dõi tay người phụ nữ trong lúc người đàn ông nói. Khó tách lỗi chọn nhầm người khỏi lỗi nhận nhầm hành động của đúng người. |
+| `4075791856_5` | Sai QA và đoạn theo nhãn. *Xoa đầu* → *nghe người đàn ông nói*. IoP 0,173. | 33,8–42,1 → 24,7–35,7. Đỉnh 30,2. | Nhóm nghi đáp án chuẩn cần kiểm lại. Hai mô tả có thể cùng đúng trong một cảnh. Cần xác minh cụ thể người phụ nữ mặc áo đen bắt chéo chân có xoa đầu trong đoạn GT hay không. |
+| `2857132732_7` | Đúng QA, sai đoạn. Đáp án *chơi xong với đứa trẻ*. | 23,5–24,0 → 1,2–5,7. Đỉnh 3,7. | Câu hỏi nói rõ `at the end` nhưng đỉnh ở đầu video. Khả năng cụm `at the end` gợi đáp án `finish` là một giả thuyết về đường tắt ngôn ngữ. Một dự đoán đúng chưa đủ để quy cho đường tắt này. |
+| `4412508597_6` | Đúng QA, sai đoạn. Đáp án *để quấn dây*. | 0,4–2,9 → 4,2–7,2. Đỉnh 5,7. | Câu hỏi nói `at the start`. Đỉnh đến sau đoạn chú giải, cho thấy một ca lệch thời điểm theo chiều ngược với ca `at the end` ở trên. |
+| `4488066715_4` | Đúng QA theo nhãn *gạt tay ra*, sai đoạn. | 0,7–4,7 → 75,2–80,2. Đỉnh 77,7. | Cảnh đầu và cuối đều có em bé, tay người lớn, bát và phới. Ca này gợi khả năng chọn nhầm lần xuất hiện của cảnh. Nhóm có nghi vấn về cách diễn đạt hoặc đối tượng của đáp án, cần duyệt nhãn riêng. |
+| `3249402410_3` | Sai QA và đoạn. *Đặt pizza sang bên* → *xoa tay phủi vụn*. | 16,0–20,0 → 9,2–14,2. Đỉnh 12,2. | Cần phân biệt động tác tay của người mặc áo đen bên phải và bám mốc *rải phô mai xong*. Dự đoán sai chưa cho biết lỗi nằm ở nhận động tác, xác định đúng người hay tìm mốc. |
+| `5116088152_1` | Sai QA và đoạn. *Để giữ chặt trái cây* → *để kéo trái cây ra*. | 5,1–8,7 → 19,7–25,7. Đỉnh 22,2. | Có nhiều lượt tương tác tay–miệng–trái cây. Nhóm nghi mô hình gán nhầm vật hoặc nhầm lần tương tác. Trong nguyên văn, `other` bổ nghĩa cho *tay còn lại* (`other hand`), nên giữ riêng giả thuyết nhầm vật với việc đọc câu hỏi. |
+| `5116088152_7` | Sai QA và đoạn. *Nắm lấy quả chuối* → *cười*. | 18,6–27,0 → 29,2–35,7. Đỉnh 33,2. | Câu yêu cầu tìm động tác chỉ tay của người lớn, rồi đọc phản ứng tay của em bé. Đây là ca cần xem chuyển động ngắn liên tiếp để phân biệt bỏ lỡ mốc chỉ tay với bỏ lỡ động tác nắm chuối. |
+
+**Nhận xét.** Trong chín ca đã chọn, sáu ca sai cả đáp án và đoạn theo nhãn, ba ca đúng đáp án nhưng sai đoạn. Cả chín có đỉnh ngoài GT. Chỉ một ca có đoạn dự đoán giao GT (`4075791856_5`). Các ca `2857132732_7` và `4412508597_6` cho thấy mô hình có thể chọn lệch dù câu hỏi cho sẵn mốc đầu/cuối. Các ca còn lại đặt ra các vấn đề khác nhau về đối tượng, động tác, mốc sự kiện hoặc độ rõ của nhãn. Mẫu này chưa đo được tần suất của từng nguyên nhân trên VAL.
+
+**Âm thanh.** Baseline Original epoch 12 nhận đặc trưng ảnh từng khung hình từ CLIP-L và văn bản câu hỏi/đáp án. Đường chạy này không nhận audio. Với hai câu `4075791856`, “người đàn ông đang nói” vì vậy là mốc mô hình phải suy ra từ hình ảnh và văn bản. Điều này giải thích nguồn tín hiệu mà mô hình có thể dùng cho mốc, còn nguyên nhân sai của từng câu vẫn cần kiểm. [Mã trích đặc trưng ảnh](../groundformer_original/code/GroundFormer/tools/extract_feat_vid.py#L91-L116) · [Mã suy luận](../groundformer_original/code/GroundFormer/train/trainval_gdqa.py#L60-L93)
